@@ -18,7 +18,12 @@ class Project
   
   def add_backer(some_backer)
     self.backers << some_backer
-    
+    if some_backer.backed_projects.include?(self)
+      some_backer
+    else
+      some_backer.backed_projects << self
+      some_backer
+    end
   end
   
   
