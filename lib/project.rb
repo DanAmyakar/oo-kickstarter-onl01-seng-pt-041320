@@ -9,13 +9,16 @@ class Project
   def initialize(title)
     @title = title
     @backers = []
+    save
+  end
+  
+  def save
+    @@all << self
   end
   
   def add_backer(some_backer)
-    #binding.pry
-    @backers << some_backer
-    some_backer.back_project(self)
-    @backers
+    if Backer.all.any?{|backer| backer == some_backer}
+      
   end
   
   
