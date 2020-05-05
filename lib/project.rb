@@ -2,7 +2,7 @@ require 'pry'
 
 class Project
   
-  attr_accessor
+  attr_accessor :backers
   attr_reader :title
   @@all = []
   
