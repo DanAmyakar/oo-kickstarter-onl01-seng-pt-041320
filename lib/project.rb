@@ -18,7 +18,12 @@ class Project
   
   def add_backer(some_backer)
     if Backer.all.any?{|backer| backer == some_backer}
-      Backer
+      self.backers << some_backer
+      some_backer.backed_projects << self
+      some_backer
+    else
+      some_backer = Backer.new(some_backer)
+      
       
   end
   
