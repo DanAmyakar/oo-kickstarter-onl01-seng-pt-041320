@@ -23,6 +23,7 @@ class Backer
     else
       some_project.backers << self
       some_project
+    end
   end
   
   
