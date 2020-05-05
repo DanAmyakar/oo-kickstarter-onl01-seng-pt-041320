@@ -18,6 +18,7 @@ class Project
   
   def add_backer(some_backer)
     if Backer.all.any?{|backer| backer == some_backer}
+      Backer
       
   end
   
